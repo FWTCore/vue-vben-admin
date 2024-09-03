@@ -120,7 +120,7 @@ function toggleUnlockForm() {
       <div
         v-if="showUnlockForm"
         class="flex-center size-full"
-        @keypress.enter.prevent="handleSubmit"
+        @keydown.enter.prevent="handleSubmit"
       >
         <div class="flex-col-center mb-10 w-[300px]">
           <VbenAvatar :src="avatar" class="enter-x mb-6 size-20" />
@@ -159,7 +159,7 @@ function toggleUnlockForm() {
     </transition>
 
     <div
-      class="enter-y absolute bottom-5 w-full text-center text-gray-300 xl:text-xl 2xl:text-3xl"
+      class="enter-y absolute bottom-5 w-full text-center xl:text-xl 2xl:text-3xl"
     >
       <div v-if="showUnlockForm" class="enter-x mb-2 text-3xl">
         {{ hour }}:{{ minute }} <span class="text-lg">{{ meridiem }}</span>
